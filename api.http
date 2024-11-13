@@ -1,0 +1,33 @@
+
+### Inicio
+GET http://localhost:3000/
+
+
+### crear pedido
+POST http://localhost:3000/orders-service
+Content-Type: application/json
+
+{
+"nombre": "Jabon olor",
+"categoria": "aseo",
+"precio" : 4000,
+"cantidad" :2
+}
+
+
+### leer el pedido
+GET http://localhost:3000/orders-retriever-service
+
+### borrar pedido
+DELETE http://localhost:3000/orders-updater-service/4
+
+### pedido actualizado por id
+PUT http://localhost:3000/orders-updater-service/2
+Content-Type: application/json
+
+{
+"nombre": "Leche Entera",
+"categoria": "Alimentos",
+"precio" : 7000,
+"cantidad" :3
+}
